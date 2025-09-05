@@ -16,49 +16,49 @@ services:
             - "@twig"
         tags: ['controller.service_arguments']
 
-    sylius.controller.export_data_country:
-        public: true
-        class: FriendsOfSylius\SyliusImportExportPlugin\Controller\ExportDataController
-        arguments:
-            - "@sylius.exporters_registry"
-            - "@sylius.resource_controller.request_configuration_factory"
-            - "@sylius.resource_controller.resources_collection_provider"
-            - "@sylius.repository.country"
-            - "%sylius.resources%"
-        tags: ['controller.service_arguments']
+    # sylius.controller.export_data_country:
+    #     public: true
+    #     class: FriendsOfSylius\SyliusImportExportPlugin\Controller\ExportDataController
+    #     arguments:
+    #         - "@sylius.exporters_registry"
+    #         - "@sylius.resource_controller.request_configuration_factory"
+    #         - "@sylius.resource_controller.resources_collection_provider"
+    #         - "@sylius.repository.country"
+    #         - "%sylius.resources%"
+    #     tags: ['controller.service_arguments']
 
-    sylius.controller.export_data_order:
-        public: true
-        class: FriendsOfSylius\SyliusImportExportPlugin\Controller\ExportDataController
-        arguments:
-            - "@sylius.exporters_registry"
-            - "@sylius.resource_controller.request_configuration_factory"
-            - "@sylius.resource_controller.resources_collection_provider"
-            - "@sylius.repository.order"
-            - "%sylius.resources%"
-        tags: ['controller.service_arguments']
+    # sylius.controller.export_data_order:
+    #     public: true
+    #     class: FriendsOfSylius\SyliusImportExportPlugin\Controller\ExportDataController
+    #     arguments:
+    #         - "@sylius.exporters_registry"
+    #         - "@sylius.resource_controller.request_configuration_factory"
+    #         - "@sylius.resource_controller.resources_collection_provider"
+    #         - "@sylius.repository.order"
+    #         - "%sylius.resources%"
+    #     tags: ['controller.service_arguments']
 
-    sylius.controller.export_data_customer:
-        public: true
-        class: FriendsOfSylius\SyliusImportExportPlugin\Controller\ExportDataController
-        arguments:
-            - "@sylius.exporters_registry"
-            - "@sylius.resource_controller.request_configuration_factory"
-            - "@sylius.resource_controller.resources_collection_provider"
-            - "@sylius.repository.customer"
-            - "%sylius.resources%"
-        tags: ['controller.service_arguments']
+    # sylius.controller.export_data_customer:
+    #     public: true
+    #     class: FriendsOfSylius\SyliusImportExportPlugin\Controller\ExportDataController
+    #     arguments:
+    #         - "@sylius.exporters_registry"
+    #         - "@sylius.resource_controller.request_configuration_factory"
+    #         - "@sylius.resource_controller.resources_collection_provider"
+    #         - "@sylius.repository.customer"
+    #         - "%sylius.resources%"
+    #     tags: ['controller.service_arguments']
 
-    sylius.controller.export_data_product:
-        public: true
-        class: FriendsOfSylius\SyliusImportExportPlugin\Controller\ExportDataController
-        arguments:
-            - "@sylius.exporters_registry"
-            - "@sylius.resource_controller.request_configuration_factory"
-            - "@sylius.resource_controller.resources_collection_provider"
-            - "@sylius.repository.product"
-            - "%sylius.resources%"
-        tags: ['controller.service_arguments']
+    # sylius.controller.export_data_product:
+    #     public: true
+    #     class: FriendsOfSylius\SyliusImportExportPlugin\Controller\ExportDataController
+    #     arguments:
+    #         - "@sylius.exporters_registry"
+    #         - "@sylius.resource_controller.request_configuration_factory"
+    #         - "@sylius.resource_controller.resources_collection_provider"
+    #         - "@sylius.repository.product"
+    #         - "%sylius.resources%"
+    #     tags: ['controller.service_arguments']
 
     # Form Type
     sylius.form.type.import:
@@ -170,44 +170,44 @@ services:
             - { name: 'console.command' }
 
     # Plugins for Exporters
-    sylius.exporter.plugin.resource.countries:
-        class: FriendsOfSylius\SyliusImportExportPlugin\Exporter\Plugin\ResourcePlugin
-        arguments:
-            - "@sylius.repository.country"
-            - "@property_accessor"
-            - "@doctrine.orm.entity_manager"
+    # sylius.exporter.plugin.resource.countries:
+    #     class: FriendsOfSylius\SyliusImportExportPlugin\Exporter\Plugin\ResourcePlugin
+    #     arguments:
+    #         - "@sylius.repository.country"
+    #         - "@property_accessor"
+    #         - "@doctrine.orm.entity_manager"
 
-    sylius.exporter.plugin.resource.orders:
-        class: FriendsOfSylius\SyliusImportExportPlugin\Exporter\Plugin\OrderResourcePlugin
-        arguments:
-            - "@sylius.repository.order"
-            - "@property_accessor"
-            - "@doctrine.orm.entity_manager"
-            - "@sylius.service.address_concatenation"
-            - "@sylius.exporter.orm.hydrator.orders"
+    # sylius.exporter.plugin.resource.orders:
+    #     class: FriendsOfSylius\SyliusImportExportPlugin\Exporter\Plugin\OrderResourcePlugin
+    #     arguments:
+    #         - "@sylius.repository.order"
+    #         - "@property_accessor"
+    #         - "@doctrine.orm.entity_manager"
+    #         - "@sylius.service.address_concatenation"
+    #         - "@sylius.exporter.orm.hydrator.orders"
 
-    sylius.exporter.plugin.resource.tax_categories:
-        class: FriendsOfSylius\SyliusImportExportPlugin\Exporter\Plugin\ResourcePlugin
-        arguments:
-            - "@sylius.repository.tax_category"
-            - "@property_accessor"
-            - "@doctrine.orm.entity_manager"
+    # sylius.exporter.plugin.resource.tax_categories:
+    #     class: FriendsOfSylius\SyliusImportExportPlugin\Exporter\Plugin\ResourcePlugin
+    #     arguments:
+    #         - "@sylius.repository.tax_category"
+    #         - "@property_accessor"
+    #         - "@doctrine.orm.entity_manager"
 
-    sylius.exporter.plugin.resource.customers:
-        class: FriendsOfSylius\SyliusImportExportPlugin\Exporter\Plugin\ResourcePlugin
-        arguments:
-            - "@sylius.repository.customer"
-            - "@property_accessor"
-            - "@doctrine.orm.entity_manager"
+    # sylius.exporter.plugin.resource.customers:
+    #     class: FriendsOfSylius\SyliusImportExportPlugin\Exporter\Plugin\ResourcePlugin
+    #     arguments:
+    #         - "@sylius.repository.customer"
+    #         - "@property_accessor"
+    #         - "@doctrine.orm.entity_manager"
 
-    sylius.exporter.plugin.resource.products:
-        class: FriendsOfSylius\SyliusImportExportPlugin\Exporter\Plugin\ProductResourcePlugin
-        arguments:
-            - "@sylius.repository.product"
-            - "@property_accessor"
-            - "@doctrine.orm.entity_manager"
-            - '@sylius.repository.channel_pricing'
-            - '@sylius.repository.product_variant'
+    # sylius.exporter.plugin.resource.products:
+    #     class: FriendsOfSylius\SyliusImportExportPlugin\Exporter\Plugin\ProductResourcePlugin
+    #     arguments:
+    #         - "@sylius.repository.product"
+    #         - "@property_accessor"
+    #         - "@doctrine.orm.entity_manager"
+    #         - '@sylius.repository.channel_pricing'
+    #         - '@sylius.repository.product_variant'
 
     # ORM hydrators to improve performance
     sylius.exporter.orm.hydrator.orders:
@@ -264,110 +264,110 @@ services:
         class: FriendsOfSylius\SyliusImportExportPlugin\Service\DefaultAddressConcatenation
 
     # Service for get list of attributes code.
-    sylius.service.attributes_code:
-        class: FriendsOfSylius\SyliusImportExportPlugin\Service\AttributeCodesProvider
-        arguments:
-            - "@sylius.repository.product_attribute"
+    # sylius.service.attributes_code:
+    #     class: FriendsOfSylius\SyliusImportExportPlugin\Service\AttributeCodesProvider
+    #     arguments:
+    #         - "@sylius.repository.product_attribute"
 
-    sylius.service.product_image_code:
-        class: FriendsOfSylius\SyliusImportExportPlugin\Service\ImageTypesProvider
-        arguments:
-            - "@sylius.repository.product_image"
+    # sylius.service.product_image_code:
+    #     class: FriendsOfSylius\SyliusImportExportPlugin\Service\ImageTypesProvider
+    #     arguments:
+    #         - "@sylius.repository.product_image"
 
-    # generic ResourceProcessors, which can work with just Property-Accessors
-    sylius.processor.countries:
-        class: FriendsOfSylius\SyliusImportExportPlugin\Processor\ResourceProcessor
-        arguments:
-            - "@sylius.factory.country"
-            - "@sylius.repository.country"
-            - "@property_accessor"
-            - "@sylius.importer.metadata_validator"
-            - "@doctrine.orm.entity_manager"
-            - ["Code"]
+    # # generic ResourceProcessors, which can work with just Property-Accessors
+    # sylius.processor.countries:
+    #     class: FriendsOfSylius\SyliusImportExportPlugin\Processor\ResourceProcessor
+    #     arguments:
+    #         - "@sylius.factory.country"
+    #         - "@sylius.repository.country"
+    #         - "@property_accessor"
+    #         - "@sylius.importer.metadata_validator"
+    #         - "@doctrine.orm.entity_manager"
+    #         - ["Code"]
 
-    sylius.processor.tax_categories:
-        class: FriendsOfSylius\SyliusImportExportPlugin\Processor\ResourceProcessor
-        arguments:
-            - "@sylius.factory.tax_category"
-            - "@sylius.repository.tax_category"
-            - "@property_accessor"
-            - "@sylius.importer.metadata_validator"
-            - "@doctrine.orm.entity_manager"
-            - ["Code", "Name", "Description"]
+    # sylius.processor.tax_categories:
+    #     class: FriendsOfSylius\SyliusImportExportPlugin\Processor\ResourceProcessor
+    #     arguments:
+    #         - "@sylius.factory.tax_category"
+    #         - "@sylius.repository.tax_category"
+    #         - "@property_accessor"
+    #         - "@sylius.importer.metadata_validator"
+    #         - "@doctrine.orm.entity_manager"
+    #         - ["Code", "Name", "Description"]
 
-    sylius.processor.customer_groups:
-        class: FriendsOfSylius\SyliusImportExportPlugin\Processor\ResourceProcessor
-        arguments:
-            - "@sylius.factory.customer_group"
-            - "@sylius.repository.customer_group"
-            - "@property_accessor"
-            - "@sylius.importer.metadata_validator"
-            - "@doctrine.orm.entity_manager"
-            - ["Code", "Name"]
+    # sylius.processor.customer_groups:
+    #     class: FriendsOfSylius\SyliusImportExportPlugin\Processor\ResourceProcessor
+    #     arguments:
+    #         - "@sylius.factory.customer_group"
+    #         - "@sylius.repository.customer_group"
+    #         - "@property_accessor"
+    #         - "@sylius.importer.metadata_validator"
+    #         - "@doctrine.orm.entity_manager"
+    #         - ["Code", "Name"]
 
-    sylius.processor.customers:
-        class: FriendsOfSylius\SyliusImportExportPlugin\Processor\ResourceProcessor
-        arguments:
-            - "@sylius.factory.customer"
-            - "@sylius.repository.customer"
-            - "@property_accessor"
-            - "@sylius.importer.metadata_validator"
-            - "@doctrine.orm.entity_manager"
-            - ["Email", "Email_canonical", "First_name" , "Last_name" ,  "Birthday", "Gender", "Phone_number", "Subscribed_to_newsletter"]
+    # sylius.processor.customers:
+    #     class: FriendsOfSylius\SyliusImportExportPlugin\Processor\ResourceProcessor
+    #     arguments:
+    #         - "@sylius.factory.customer"
+    #         - "@sylius.repository.customer"
+    #         - "@property_accessor"
+    #         - "@sylius.importer.metadata_validator"
+    #         - "@doctrine.orm.entity_manager"
+    #         - ["Email", "Email_canonical", "First_name" , "Last_name" ,  "Birthday", "Gender", "Phone_number", "Subscribed_to_newsletter"]
 
-    # Definition of custom Processors, which can have additional logic to handle dependencies to other resources
-    sylius.processor.payment_methods:
-        class: FriendsOfSylius\SyliusImportExportPlugin\Processor\PaymentMethodProcessor
-        arguments:
-            - "@sylius.custom_factory.payment_method"
-            - "@sylius.repository.payment_method"
-            - "@sylius.importer.metadata_validator"
-            - "@doctrine.orm.entity_manager"
-            - ['Code', 'Name', 'Instructions', 'Gateway']
+    # # Definition of custom Processors, which can have additional logic to handle dependencies to other resources
+    # sylius.processor.payment_methods:
+    #     class: FriendsOfSylius\SyliusImportExportPlugin\Processor\PaymentMethodProcessor
+    #     arguments:
+    #         - "@sylius.custom_factory.payment_method"
+    #         - "@sylius.repository.payment_method"
+    #         - "@sylius.importer.metadata_validator"
+    #         - "@doctrine.orm.entity_manager"
+    #         - ['Code', 'Name', 'Instructions', 'Gateway']
 
-    sylius.processor.products:
-        class: FriendsOfSylius\SyliusImportExportPlugin\Processor\ProductProcessor
-        arguments:
-            - "@sylius.custom_factory.product"
-            - "@sylius.custom_factory.taxon"
-            - "@sylius.repository.product"
-            - "@sylius.repository.taxon"
-            - "@sylius.importer.metadata_validator"
-            - "@property_accessor"
-            - "@sylius.repository.product_attribute"
-            - "@sylius.service.attributes_code"
-            - "@sylius.factory.product_attribute_value"
-            - "@sylius.repository.channel"
-            - '@sylius.factory.product_taxon'
-            - '@sylius.factory.product_image'
-            - '@sylius.factory.product_variant'
-            - '@sylius.factory.channel_pricing'
-            - '@sylius.repository.product_taxon'
-            - '@sylius.repository.product_image'
-            - '@sylius.repository.product_variant'
-            - '@sylius.repository.channel_pricing'
-            - '@sylius.service.product_image_code'
-            - "@sylius.generator.slug"
-            - "@sylius.importers_transformer_pool"
-            - "@doctrine.orm.entity_manager"
-            - ['Code', 'Locale', 'Name', 'Description', 'Short_description', 'Meta_description', 'Meta_keywords', 'Main_taxon', 'Taxons', 'Channels', 'Enabled', 'Price']
+    # sylius.processor.products:
+    #     class: FriendsOfSylius\SyliusImportExportPlugin\Processor\ProductProcessor
+    #     arguments:
+    #         - "@sylius.custom_factory.product"
+    #         - "@sylius.custom_factory.taxon"
+    #         - "@sylius.repository.product"
+    #         - "@sylius.repository.taxon"
+    #         - "@sylius.importer.metadata_validator"
+    #         - "@property_accessor"
+    #         - "@sylius.repository.product_attribute"
+    #         - "@sylius.service.attributes_code"
+    #         - "@sylius.factory.product_attribute_value"
+    #         - "@sylius.repository.channel"
+    #         - '@sylius.factory.product_taxon'
+    #         - '@sylius.factory.product_image'
+    #         - '@sylius.factory.product_variant'
+    #         - '@sylius.factory.channel_pricing'
+    #         - '@sylius.repository.product_taxon'
+    #         - '@sylius.repository.product_image'
+    #         - '@sylius.repository.product_variant'
+    #         - '@sylius.repository.channel_pricing'
+    #         - '@sylius.service.product_image_code'
+    #         - "@sylius.generator.slug"
+    #         - "@sylius.importers_transformer_pool"
+    #         - "@doctrine.orm.entity_manager"
+    #         - ['Code', 'Locale', 'Name', 'Description', 'Short_description', 'Meta_description', 'Meta_keywords', 'Main_taxon', 'Taxons', 'Channels', 'Enabled', 'Price']
 
-    sylius.class_metadata.product_image:
-        class: Doctrine\ORM\Mapping\ClassMetadata
-        factory:   ['@doctrine.orm.default_entity_manager' , 'getClassMetadata']
-        arguments: ['%sylius.model.product_image.class%']
+    # sylius.class_metadata.product_image:
+    #     class: Doctrine\ORM\Mapping\ClassMetadata
+    #     factory:   ['@doctrine.orm.default_entity_manager' , 'getClassMetadata']
+    #     arguments: ['%sylius.model.product_image.class%']
 
-    sylius.repository.product_image:
-        class: FriendsOfSylius\SyliusImportExportPlugin\Repository\ProductImageImageRepository
-        arguments:
-            - '@doctrine.orm.default_entity_manager'
-            - '@sylius.class_metadata.product_image'
+    # sylius.repository.product_image:
+    #     class: FriendsOfSylius\SyliusImportExportPlugin\Repository\ProductImageImageRepository
+    #     arguments:
+    #         - '@doctrine.orm.default_entity_manager'
+    #         - '@sylius.class_metadata.product_image'
 
-    sylius.processor.taxonomies:
-        class: FriendsOfSylius\SyliusImportExportPlugin\Processor\TaxonomyProcessor
-        arguments:
-            - "@sylius.custom_factory.taxon"
-            - "@sylius.repository.taxon"
-            - "@sylius.provider.locale"
-            - "@sylius.importer.metadata_validator"
-            - ["Code", "Parent", "Locale", "Name", "Slug", "Description"]
+    # sylius.processor.taxonomies:
+    #     class: FriendsOfSylius\SyliusImportExportPlugin\Processor\TaxonomyProcessor
+    #     arguments:
+    #         - "@sylius.custom_factory.taxon"
+    #         - "@sylius.repository.taxon"
+    #         - "@sylius.provider.locale"
+    #         - "@sylius.importer.metadata_validator"
+    #         - ["Code", "Parent", "Locale", "Name", "Slug", "Description"]
