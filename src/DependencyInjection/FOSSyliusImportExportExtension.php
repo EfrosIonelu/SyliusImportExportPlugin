@@ -39,19 +39,19 @@ class FOSSyliusImportExportExtension extends Extension
         $loader->load('services.yml');
 
         if (class_exists(self::CLASS_CSV_READER)) {
-            $loader->load('services_import_csv.yml');
+            // $loader->load('services_import_csv.yml');
         }
 
         if (class_exists(self::CLASS_CSV_WRITER)) {
-            $loader->load('services_export_csv.yml');
+           // $loader->load('services_export_csv.yml');
         }
 
         if (class_exists(self::CLASS_SPREADSHEET_READER)) {
-            $loader->load('services_import_spreadsheet.yml');
+          //  $loader->load('services_import_spreadsheet.yml');
         }
 
         if (class_exists(self::CLASS_SPREADSHEET_WRITER) && extension_loaded('zip')) {
-            $loader->load('services_export_spreadsheet.yml');
+          //  $loader->load('services_export_spreadsheet.yml');
         }
 
         if (isset($config['message_queue'])) {
@@ -61,8 +61,8 @@ class FOSSyliusImportExportExtension extends Extension
             $container->setParameter('sylius.message_queue', $config['message_queue']);
         }
 
-        $loader->load('services_import_json.yml');
+        // $loader->load('services_import_json.yml');
 
-        $loader->load('services_export_json.yml');
+        // $loader->load('services_export_json.yml');
     }
 }
