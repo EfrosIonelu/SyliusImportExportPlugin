@@ -3,7 +3,6 @@
 
 <div class="card">
     <div class="card-body">
-        <h5 class="card-title">{{ 'fos.import_export.ui.import'|trans }} {{ header|trans }}</h5>
         <div class="card-text">
             {{ form_start(form, {
                 'action': path('app_import_data',  {'resource': resource}),
@@ -14,9 +13,7 @@
                 {{ form_widget(form) }}
             </div>
 
-            <button type="submit" class="btn">
-                {{ resource|capitalize }} {{ 'fos.import_export.ui.import'|trans }}
-            </button>
+            <button type="submit" class="btn">{{ 'fos.import_export.ui.import'|trans }}</button>
             {{ form_end(form) }}
         </div>
     </div>
